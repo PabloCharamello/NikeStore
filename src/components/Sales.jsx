@@ -2,7 +2,6 @@ import React from "react";
 import Item from "./utils/Item";
 import Title from "./utils/Title";
 const Sales = ({ ifExists, endpoint: { title, items } }) => {
-  console.log(items);
   return (
     <>
       <div className="nike-container">
@@ -15,7 +14,7 @@ const Sales = ({ ifExists, endpoint: { title, items } }) => {
           }`}
         >
           {items?.map((item, i) => (
-            <Item {...item} key={i} />
+            <Item {...item} key={i} ifExists={ifExists} />
           ))}
           <Item />
         </div>

@@ -31,7 +31,7 @@ import twitter from "../assets/twitter.svg";
 import youtube from "../assets/youtube.svg";
 import messenger from "../assets/messenger.svg";
 
-const heroapi = {
+const heroApi = {
   title: "Play With Electric Nike",
   subtitle: "Adapt 2.0 Sneakers",
   img: heroimg,
@@ -89,7 +89,7 @@ const popularSales = {
   ],
 };
 
-const highlight = {
+const highLight = {
   heading: "HIGHLIGHTS",
   title: "NIKE AIR WITH LIMITLESS CHOICES",
   text: "Our Purpose is to move the world forward. We take action by building community, protecting our planet and increasing access to sport.",
@@ -376,11 +376,11 @@ const footerAPI = {
 };
 
 export {
-  heroapi,
+  heroApi,
   footerAPI,
   story,
   sneaker,
-  highlight,
+  highLight,
   topRateSales,
   popularSales,
 };
