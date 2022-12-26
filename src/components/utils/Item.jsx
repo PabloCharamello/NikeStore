@@ -17,7 +17,7 @@ const Item = ({
   return (
     <>
       <div
-        className={`relative bg-gradient-to-b ${color} ${shadow} grid items-center justify-items-center`}
+        className={`relative bg-gradient-to-b ${color} ${shadow} grid items-center justify-items-center rounded-xl py-4 px-5 transition-all duration-700 ease-in-out w-full hover:scale-105`}
       >
         <div className="grid items-center justify-items-center">
           <h2 className="text-slate-200 text-xl lg:text-lg md:text-base font-medium filter drop-shadow">
@@ -27,28 +27,40 @@ const Item = ({
             {text}
           </p>
 
-          <div className="flex items-center justify-between w-28 ">
-            <div className="flex items-center bg-white/80 px-1 rounded">
-              <h3 className="text-black text-sm">${price}</h3>
+          <div className="flex items-center justify-between w-28 my-2">
+            <div className="flex items-center bg-white/80 px-1 rounded blur-effect-theme">
+              <h3 className="text-black text-sm font-medium ">${price}</h3>
             </div>
             <div className="flex items-center gap-1">
               <StarIcon className="icon-style w-5 h-5 md:w-4 md:h-4" />
-              <h3 className="text-sm font-normal">{rating}</h3>
+              <h3 className="text-sm font-normal md:text-sm text-slate-100">
+                {rating}
+              </h3>
             </div>
           </div>
 
-          <div>
-            <button type="button" className="">
+          <div className="flex items-center gap-3">
+            <button
+              type="button"
+              className="bg-white/90 blur-effect-theme button-theme p-0.5 shadow shadow-slate-200"
+            >
               <ShoppingBagIcon className="icon-style text-slate-900" />
             </button>
-            <button type="button" className="">
+            <button
+              type="button"
+              className="bg-white/90 blur-effect-theme button-theme px-2 py-1 shadow shadow-slate-200 text-sm text-black"
+            >
               {btn}
             </button>
           </div>
         </div>
 
         <div className="flex items-center">
-          <img src={img} alt="img/item-img" />
+          <img
+            src={img}
+            alt="img/item-img"
+            className="h-36 w-64 transitions-theme hover:-rotate-12 object-contain"
+          />
         </div>
       </div>
     </>
