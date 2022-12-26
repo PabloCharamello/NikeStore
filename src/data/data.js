@@ -50,7 +50,7 @@ const heroapi = {
   ],
 };
 
-const popularsales = {
+const popularSales = {
   title: "Popular Sales",
   items: [
     {
@@ -107,7 +107,7 @@ const sneaker = {
   img: sneakershoe,
 };
 
-const toprateslaes = {
+const topRateSales = {
   title: "Top Rated Sales",
   items: [
     {
@@ -381,6 +381,6 @@ export {
   story,
   sneaker,
   highlight,
-  toprateslaes,
-  popularsales,
+  topRateSales,
+  popularSales,
 };
