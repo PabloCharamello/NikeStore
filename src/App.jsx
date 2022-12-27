@@ -1,4 +1,5 @@
 import React from "react";
+import Cart from "./components/cart/Cart";
 import FlexContent from "./components/FlexContent";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
@@ -19,6 +20,7 @@ const App = () => {
   return (
     <>
       <Navbar />
+      <Cart />
       <main className="flex flex-col gap-16 relative">
         <Hero heroapi={heroApi} />
         <Sales endpoint={popularSales} ifExists />
