@@ -1,21 +1,45 @@
 import React from "react";
 
-const FlexContent = ({ endpoint: { title, heading, text, img, url, btn } }) => {
+const FlexContent = ({
+  ifExists,
+  endpoint: { title, heading, text, img, url, btn },
+}) => {
   return (
     <>
-      <div>
-        <div>
-          <h2>{heading}</h2>
-          <h2>{title}</h2>
-          <p>{text}</p>
-          <a href={url}>
-            <button type="button" className="">
+      <div
+        className={`flex items-center justify-between lg:flex-col lg:justify-center nike-container ${
+          ifExists ? "flex-row-reverse" : "flex-row"
+        }`}
+      >
+        <div className="max-w-lg lg:max-w-none w-full md:text-center grid items-center lg:justify-items-center">
+          <h2 className="text-4xl sm:text-3xl font-bold text-gradient">
+            {heading}
+          </h2>
+          <h2 className="text-5xl lg:text-4xl md:text-3xl sm:text-2xl font-bold text-slate-900 filter drop-shadow-lg">
+            {title}
+          </h2>
+          <p className="xl:text-sm my-4 text-salte-900">{text}</p>
+          <a
+            href={url}
+            classNameflex
+            items-center
+            target={"_blank"}
+            role="button"
+          >
+            <button
+              type="button"
+              className="button-theme bg-slate-900 shadows-slate-900 text-slate-100 py-1.5"
+            >
               {btn}
             </button>
           </a>
         </div>
-        <div>
-          <img src="" alt="" />
+        <div className="flex items-center justify-center max-w-xl relative lg:max-w-none w-full">
+          <img
+            src={img}
+            alt={`img/${heading}`}
+            className={`w-auto object-fill transtitions-theme`}
+          />
         </div>
       </div>
     </>

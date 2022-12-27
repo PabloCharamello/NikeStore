@@ -25,10 +25,10 @@ const Item = ({
             ifExists ? "justify-items-start" : "justify-items-center"
           }`}
         >
-          <h2 className="text-slate-200 text-xl lg:text-lg md:text-base font-medium filter drop-shadow">
+          <h2 className="text-slate-200 text-xl lg:text-lg md:text-base font-medium filter drop-shadow z-10">
             {title}
           </h2>
-          <p className="text-slate-200 filter drop-shadow text-base md:text-sm font-normal">
+          <p className="text-slate-200 filter drop-shadow text-base md:text-sm font-normal z-10">
             {text}
           </p>
 
@@ -38,7 +38,7 @@ const Item = ({
             </div>
             <div className="flex items-center gap-1">
               <StarIcon className="icon-style w-5 h-5 md:w-4 md:h-4" />
-              <h3 className="text-sm font-normal md:text-sm text-slate-100">
+              <h3 className="text-sm font-normal md:text-sm text-slate-100 z-10">
                 {rating}
               </h3>
             </div>

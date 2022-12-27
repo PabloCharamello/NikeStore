@@ -16,7 +16,7 @@ const App = () => {
       <main className="flex flex-col gap-16 relative">
         <Hero heroapi={heroApi} />
         <Sales endpoint={popularSales} ifExists />
-        <FlexContent endpoint={highLight} />
+        <FlexContent endpoint={highLight} ifExists />
         <Sales endpoint={topRateSales} />
         <FlexContent endpoint={sneaker} />
       </main>
