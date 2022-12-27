@@ -21,8 +21,7 @@ const FlexContent = ({
           <p className="xl:text-sm my-4 text-salte-900">{text}</p>
           <a
             href={url}
-            classNameflex
-            items-center
+            className="flex items-center"
             target={"_blank"}
             role="button"
           >
