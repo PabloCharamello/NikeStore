@@ -33,7 +33,7 @@ import messenger from "../assets/messenger.svg";
 
 const heroApi = {
   title: "Play With Electric Nike",
-  subtitle: "The PUMITHAS Model",
+  subtitle: "Adapt 2.0 Sneakers",
   img: heroimg,
   btnText: "Explore Product",
   videos: [
