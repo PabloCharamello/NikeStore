@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
-import { setOpenCart } from "../app/reducers/CartSlice.js";
+import { useDispatch, useSelector } from "react-redux";
+import { selectTotalQty, setOpenCart } from "../app/reducers/CartSlice.js";
 import {
   HeartIcon,
   MagnifyingGlassIcon,
@@ -11,6 +11,7 @@ import logo from "../assets/logo.png";
 const Navbar = () => {
   const [navState, setNavState] = useState(false);
   const dispatch = useDispatch();
+  const totalQty = useSelector(selectTotalQty);
 
   const onCartToggle = () => {
     dispatch(
@@ -86,7 +87,7 @@ const Navbar = () => {
                       : "bg-slate-100 text-slate-900 shadow-slate-100"
                   }`}
                 >
-                  0
+                  {totalQty}
                 </div>
               </button>
             </li>

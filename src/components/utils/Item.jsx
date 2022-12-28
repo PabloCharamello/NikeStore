@@ -70,6 +70,10 @@ const Item = ({
             </button>
             <button
               type="button"
+              onClick={() => {
+                onAddToCart();
+                onCartToggle();
+              }}
               className="bg-white/90 blur-effect-theme button-theme px-2 py-1 shadow shadow-slate-200 text-sm text-black"
             >
               {btn}
