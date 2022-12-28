@@ -1,6 +1,10 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { selectCartState, setCloseCart } from "../../app/reducers/CartSlice.js";
+import {
+  selectCartItems,
+  selectCartState,
+  setCloseCart,
+} from "../../app/reducers/CartSlice.js";
 import CartCount from "./CartCount";
 import CartEmpty from "./CartEmpty";
 import CartItem from "./CartItem";
@@ -8,6 +12,7 @@ import CartItem from "./CartItem";
 const Cart = () => {
   const dispatch = useDispatch();
   const ifCartState = useSelector(selectCartState);
+  const cartItems = useSelector(selectCartItems);
   const onCartToggle = () => {
     dispatch(
       setCloseCart({
@@ -29,8 +34,17 @@ const Cart = () => {
           className={`blur-effect-theme h-screen max-w-xl w-full absolute right-0`}
         >
           <CartCount onCartToggle={onCartToggle} />
-          <CartEmpty />
-          <CartItem />
+          {cartItems?.length === 0 ? (
+            <CartEmpty />
+          ) : (
+            <div>
+              <div>
+                {cartItems?.map((item, i) => (
+                  <CartItem key={i} item={item} />
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </>
